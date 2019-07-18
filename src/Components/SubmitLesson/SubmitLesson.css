@@ -1,0 +1,76 @@
+.SubmitLesson {
+  color: black;
+  /* margin: 5rem 0 0 10rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.create-info-container {
+  border-radius: 10px;
+  margin-top: 3rem;
+  background-color: white;
+  width: 40%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.create-form {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-auto-rows: repeat(6, 50px);
+  text-align: right;
+  margin: 0 6rem 0 1rem;
+}
+
+.create-input {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  /* display: inline-block; */
+}
+
+.create-error {
+  color: red;
+  font-weight: bold;
+  margin: 0;
+}
+
+.rules {
+  resize: none;
+}
+
+.create-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-text-container h3 {
+  text-align: center;
+}
+
+.create-buttons-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.submit {
+  grid-row: 7;
+  grid-column: 1 / span 2;
+  min-width: 20%;
+  font-size: 1rem;
+  justify-self: center;
+  margin-left: 3rem;
+  background-color: #06deb2;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+}
