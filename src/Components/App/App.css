@@ -1,0 +1,77 @@
+.App {
+  height: 100vh;
+}
+.nav-bar {
+  background-color: white;
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+
+.nav-logo-container {
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+}
+
+/* .nav-logo-container h1 {
+    
+} */
+
+.nav-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+}
+
+.nav-logo {
+  width: 40px;
+  padding-right: 1rem;
+}
+
+.nav-buttons {
+  height: 80%;
+  background-color: #06deb2;
+  color: white;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  border: transparent;
+  border-radius: 10px;
+}
+
+.nav-links {
+  color: black;
+  margin: 0 1rem;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Amatic SC", cursive;
+  color: black;
+}
+
+.nav-greeting {
+  color: black;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.nav-logout {
+  min-height: 80%;
+  background-color: #06deb2;
+  color: white;
+  margin: 0 1rem;
+  border: transparent;
+  border-radius: 10px;
+}
