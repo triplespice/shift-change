@@ -1,0 +1,50 @@
+.Login {
+  color: black;
+  /* margin: 5rem 0 0 10rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.login-info-container {
+  margin-top: 3rem;
+  background-color: white;
+  width: 25%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-auto-rows: repeat(6, 50px);
+  text-align: right;
+  margin: 2rem 2rem 0 1rem;
+}
+
+.login-input {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  /* display: inline-block; */
+}
+
+.login-error {
+  color: red;
+  font-weight: bold;
+  margin: 0;
+}
+
+.login-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form input[type="submit"] {
+  margin-left: 0;
+}
