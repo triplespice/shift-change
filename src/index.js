@@ -9,7 +9,7 @@ ReactDOM.render(
   <Router>
     <Route path="/" render={props => <App {...props} />} />
   </Router>,
-  document.getElementByIdById("root")
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

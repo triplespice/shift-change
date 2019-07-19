@@ -13,6 +13,8 @@ import Login from "../Login/Login";
 import Signup from "../Signup/Signup";
 import User from "../User/User";
 import axios from "axios";
+// import Search from "../Search/Search";
+
 import { runInContext } from "vm";
 
 let url = "https://shift-change-api.herokuapp.com";
@@ -145,7 +147,7 @@ class App extends Component {
               render={props => <Home lessons={this.state.lessons} {...props} />}
             />
           )}
-          <Route
+          {/* <Route
             path="/search/agendas"
             exact
             render={props => (
@@ -158,7 +160,7 @@ class App extends Component {
             render={props => (
               <Search data={this.state.lesssons} type="lessons" {...props} />
             )}
-          />
+          /> */}
           <Route
             path="/build-agenda"
             exact
@@ -173,20 +175,20 @@ class App extends Component {
           <Route
             path="lessons/:id"
             exact
-            render={props => <Lesson {...props} />}
+            render={props => <Lessons {...props} />}
           />
           <Route
             path="agendas/:id"
             exact
             render={props => (
-              <Agenda
+              <Agendas
                 lessons={this.state.lessons}
                 isLoggedIn={this.state.isLoggedIn}
                 {...props}
               />
             )}
           />
-          <Route path="/agenda/:id" exact component={Agenda} />
+          <Route path="/agendas/:id" exact component={Agendas} />
           <Route
             path="/submit-lesson"
             exact

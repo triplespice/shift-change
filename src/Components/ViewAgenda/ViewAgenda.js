@@ -48,7 +48,7 @@ class ViewAgenda extends Component {
         headers: { Authorization: "bearer " + localStorage.token }
       })
       .then(res => this.setState({ agenda: res.data }))
-      .then(_ => this.setState({ agenda: res.data }))
+      // .then(_ => this.setState({ agenda: res.data }))
       .then(_ => this.props.history.push("/search/agendas"))
       .catch(err => {
         console.log(err);

@@ -1,0 +1,38 @@
+import React, { Component } from "react";
+import "./Agendas.css";
+import logo from "../App/clipboard.png";
+
+class Agendas extends Component {
+  handleClick = id => {
+    if (this.props.type === "agendas") {
+      this.props.history.push("/agendas/ + id");
+    }
+  };
+
+  render() {
+    return (
+      <div className="Agendas">
+        <div className="agendas-div-container">
+          {this.props.data.map((data, index) => {
+            if (this.props.type === "agendas") {
+              if (data.hidden === false) {
+                return (
+                  <div
+                    onClick={() => this.handleClick(data._id)}
+                    className="agendas-div-agenda"
+                    key={index}
+                  >
+                    <img src={logo} alt="logo" />
+                    <span className="agendas-agenda-caption">{data.name}</span>
+                  </div>
+                );
+              }
+            }
+          })}
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Agendas;

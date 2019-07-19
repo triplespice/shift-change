@@ -1,0 +1,64 @@
+.Lessons {
+  width: 100%;
+}
+
+.lessons-div-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.lessons-div {
+  display: inline-flex;
+  max-width: 20%;
+  min-width: 20%;
+  max-height: 200px;
+  /* min-height: 20%; */
+  margin: 2rem;
+  border: 1px solid black;
+  position: relative;
+  cursor: pointer;
+}
+
+.lessons-div img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.lessons-caption {
+  position: absolute;
+  bottom: 0;
+  height: 10%;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+  font-weight: 800;
+  padding: 0.5rem 0 0.5rem 0;
+  width: 100%;
+}
+
+.lessons-div-lesson {
+  min-width: 20%;
+  min-height: 150px;
+  margin: 2rem;
+  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.6);
+  position: relative;
+  display: flex;
+  align-content: space-around;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  max-width: 200px;
+}
+
+.lessons-div-lesson img {
+  max-width: 20%;
+  max-height: 20%;
+}
+
+.lessons-lesson-caption {
+  justify-content: center;
+  align-content: center;
+  color: black;
+  font-weight: 800;
+}
