@@ -173,12 +173,17 @@ class App extends Component {
             )}
           />
           <Route
-            path="lessons/:id"
+            path="/search/lessons"
             exact
             render={props => <Lessons {...props} />}
           />
           <Route
-            path="agendas/:id"
+            path="/search/lessons/:id"
+            exact
+            render={props => <ViewLesson {...props} />}
+          />
+          <Route
+            path="/agendas/:id"
             exact
             render={props => (
               <Agendas

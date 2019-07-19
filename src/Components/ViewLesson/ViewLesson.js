@@ -3,7 +3,7 @@ import "./ViewLesson.css";
 import axios from "axios";
 import Modal from "react-modal";
 
-let url = "https://rec-creation-api.herokuapp.com";
+let url = "https://shift-change-api.herokuapp.com";
 
 const customStyles = {
   content: {
@@ -32,7 +32,7 @@ class ViewLesson extends Component {
   componentDidMount() {
     let extension = this.props.match.params.id;
     axios
-      .get(url + "/api/lessons/id" + extension)
+      .get(url + "/api/lessons/id/" + extension)
       .then(res => this.setState({ lesson: res.data }))
       .catch(err => {
         console.log(err);
@@ -116,7 +116,7 @@ class ViewLesson extends Component {
     return (
       <div className="Lesson">
         <div className="lesson-container">
-          {this.state.lesson.title && (
+          {this.state.lesson && (
             <div className="lesson-info-container">
               <h1>{this.state.lesson.title}</h1>
               <ul className="lesson-list">
@@ -146,21 +146,21 @@ class ViewLesson extends Component {
             Title:{" "}
             <input
               type="text"
-              defaultValue={this.state.lesson.title}
+              defaultValue={this.state.lesson ? this.state.lesson.title : ""}
               className="title lesson-input"
               name="title"
             />
             Category:
             <input
               type="text"
-              defaultValue={this.state.lesson.category}
+              defaultValue={this.state.lesson ? this.state.lesson.category : ""}
               className="category lesson-input"
               name="category"
             />
             Details:
             <input
               type="text"
-              defaultValue={this.state.lesson.details}
+              defaultValue={this.state.lesson ? this.state.lesson.details : ""}
               className="details lesson-input"
               name="details"
             />
