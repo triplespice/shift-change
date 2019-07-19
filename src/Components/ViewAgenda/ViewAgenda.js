@@ -42,7 +42,7 @@ class ViewAgenda extends Component {
   deleteAgenda = e => {
     e.preventDefault();
 
-    let extension = this.props.match.params.ide;
+    let extension = this.props.match.params.id;
     axios
       .delete(url + "/api/agendas/delete/" + extension, {
         headers: { Authorization: "bearer " + localStorage.token }
