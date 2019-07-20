@@ -14,7 +14,7 @@ class User extends Component {
     let url = "https://shift-change-api.herokuapp.com";
     let extension = localStorage.userID;
     axios
-      .get(url + "/api/users/id" + extension)
+      .get(url + "/api/users/id/" + extension)
       .then(res => this.setState({ user: res.data }))
       .catch(err => {
         console.log(err);

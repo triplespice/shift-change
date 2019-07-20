@@ -12,7 +12,10 @@ class Agendas extends Component {
   render() {
     return (
       <div className="Agendas">
-        <div className="agendas-div-container">
+        <div className="agenda-header-container">
+          <h2>Select An Agenda to View:</h2>
+        </div>
+        {/* <div className="agendas-div-container">
           {this.props.data.map((data, index) => {
             if (this.props.type === "agendas") {
               if (data.hidden === false) {
@@ -29,7 +32,7 @@ class Agendas extends Component {
               }
             }
           })}
-        </div>
+        </div> */}
       </div>
     );
   }

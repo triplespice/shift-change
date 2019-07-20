@@ -3,7 +3,7 @@ import "./ViewAgenda.css";
 import axios from "axios";
 import Modal from "react-modal";
 
-let url = "https://rec-creation-api.herokuapp.com";
+let url = "https://shift-change-api.herokuapp.com";
 
 const customStyles = {
   content: {
@@ -119,7 +119,7 @@ class ViewAgenda extends Component {
     return (
       <div className="Agenda">
         <div className="agenda-container">
-          {this.state.agenda.date && (
+          {this.state.agenda && (
             <div className="agenda-info-container">
               <h1>{this.state.agenda.date}</h1>
               <ul className="agenda-list">
@@ -167,28 +167,32 @@ class ViewAgenda extends Component {
             Date:{" "}
             <input
               type="text"
-              defaultValue={this.state.agenda.date}
+              defaultValue={this.state.agenda ? this.state.agenda.date : ""}
               className="date agenda-input"
               name="date"
             />
             Announcements:
             <input
               type="text"
-              defaultValue={this.state.agenda.announcements}
+              defaultValue={
+                this.state.agenda ? this.state.agenda.announcements : ""
+              }
               className="location agenda-input"
               name="announcements"
             />
             Tasks:
             <input
               type="text"
-              defaultValue={this.state.agenda.tasks}
+              defaultValue={this.state.agenda ? this.state.agenda.tasks : ""}
               className="tasks agenda-input"
               name="tasks"
             />
             Shout Outs:
             <input
               type="text"
-              defaultValue={this.state.agenda.shoutOuts}
+              defaultValue={
+                this.state.agenda ? this.state.agenda.shoutOuts : ""
+              }
               className="shoutOuts agenda-input"
               name="shoutOuts"
             />

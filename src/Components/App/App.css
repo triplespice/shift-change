@@ -57,7 +57,10 @@
 .title {
   font-size: 2rem;
   font-weight: bold;
-  font-family: "Amatic SC", cursive;
+  /* font-family: "Amatic SC", cursive; */
+  font-family: "Fira Sans", sans-serif;
+  font-style: italic;
+  /* font-family: "Righteous", cursive; */
   color: black;
 }
 

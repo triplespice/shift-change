@@ -1,11 +1,18 @@
 .Home {
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
   color: white;
   /* margin: 5rem 0 0 10rem; */
   display: flex;
   height: 100%;
-  flex-direction: column;
+  flex-direction: row;
   /* align-items: center; */
   justify-content: space-between;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .home-intro-title {
@@ -13,10 +20,15 @@
   font-size: 3rem;
   display: inline;
   max-width: 80%;
+  line-height: 1.2;
+  font-family: "Fira Sans", sans-serif;
+  font-style: italic;
 }
 
 .home-intro-text {
   max-width: 80%;
+  margin-top: 10px;
+  line-height: 1.5;
 }
 
 .Home p {
@@ -25,23 +37,27 @@
 }
 
 .home-info-container {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   display: flex;
   flex-direction: column;
-  max-width: 100%;
+  max-width: 50%;
   padding-left: 5rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .home-text-container {
   /* max-width: 80%; */
   display: flex;
   flex-direction: column;
+  margin: 80px 0 0 40px;
 }
 
 .home-buttons-container {
-  display: flex;
-  justify-content: center;
-  margin: 2rem 0;
+  /* display: flex;
+  justify-content: center; */
+  /* margin: 2rem 0; */
+  margin: 60px 20% 10px 20%;
 }
 
 .nav-buttons {
@@ -57,4 +73,26 @@
   font-weight: 800;
   text-align: center;
   vertical-align: middle;
+}
+
+.hero-image {
+  float: right;
+  display: flex;
+
+  align-items: flex-end;
+  bottom: 0;
+
+  margin-top: 80px;
+  display: block;
+}
+
+.hero-image-image {
+  display: block;
+}
+
+.footer {
+  background-color: #464a4a;
+  height: 100px;
+  padding-top: 0;
+  margin-top: 0;
 }

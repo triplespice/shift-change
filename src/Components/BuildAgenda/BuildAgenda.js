@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./BuildAgenda.css";
 import axios from "axios";
+import AddLesson from "../AddLesson/AddLesson";
 
 class BuildAgenda extends Component {
   constructor(props) {
@@ -62,7 +63,7 @@ class BuildAgenda extends Component {
           </div>
           <form className="build-agenda-form" onSubmit={this.handleForm}>
             Date:
-            <input type="text" className="create-input" name="date" />
+            <input type="date" id="date" className="create-input" name="date" />
             Announcements:
             <textarea className="create-input" name="announcements" />
             ShoutOuts:
@@ -71,13 +72,16 @@ class BuildAgenda extends Component {
             <textarea className="create-input" name="tasks" />
             Lesson:
             <textarea className="create-input" name="lesson" />
+            <input className="submit" type="submit" value="Save Agenda" />
           </form>
         </div>
-        <div className="select-lesson-container" />
-        <div className="choose-lesson-header">
-          <h2>Choose a Lesson to Add to Your Agenda</h2>
+        <div className="select-lesson-container">
+          <div className="choose-lesson-header">
+            <h2>Choose a Lesson to Add to Your Agenda</h2>
+          </div>
+          <div className="choose-lesson-list" />
+          <AddLesson />
         </div>
-        <div className="choose-lesson-list" />
       </div>
     );
   }

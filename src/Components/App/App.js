@@ -97,17 +97,17 @@ class App extends Component {
             </Link>
           </div>
           <div className="nav-buttons-container">
-            <Link to="/search/agendas" className="nav-links">
-              Agendas
-            </Link>
-            <Link to="/search/lessons" className="nav-links">
-              Lessons
-            </Link>
             <Link
               to={this.state.isLoggedIn ? "/build-agenda" : "/login"}
               className="nav-links"
             >
               Build Agenda
+            </Link>
+            <Link to="/search/agendas" className="nav-links">
+              View Agendas
+            </Link>
+            <Link to="/search/lessons" className="nav-links">
+              Lessons
             </Link>
             <Link
               to={this.state.isLoggedIn ? "/submit-lesson" : "/login"}
@@ -115,6 +115,7 @@ class App extends Component {
             >
               Submit Lesson
             </Link>
+
             {!this.state.isLoggedIn && (
               <Link to="/login" className="nav-buttons">
                 Login
@@ -126,7 +127,7 @@ class App extends Component {
               </Link>
             )}
             {this.state.isLoggedIn && (
-              <Link to="/user">
+              <Link to={"/user/" + localStorage.userID}>
                 <span className="nav-greeting">
                   {"Hello, " + this.state.name}
                 </span>
@@ -183,7 +184,7 @@ class App extends Component {
             render={props => <ViewLesson {...props} />}
           />
           <Route
-            path="/agendas/:id"
+            path="/search/agendas/"
             exact
             render={props => (
               <Agendas
@@ -248,7 +249,7 @@ class App extends Component {
             />
           )}
           <Route
-            path="/user"
+            path="/user/:id"
             exact
             render={props => (
               <User

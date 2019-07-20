@@ -1,14 +1,31 @@
 import React, { Component } from "react";
-import "./Lessons.css";
+import "./AddLesson.css";
 import logo from "../App/clipboard.png";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Modal from "react-modal";
 
-class Lessons extends Component {
+const customStyles = {
+  content: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    height: "75%",
+    width: "40%"
+  }
+};
+
+class AddLesson extends Component {
   constructor() {
     super();
     this.state = {
-      lessons: []
+      lessons: [],
+      lessonObj: {},
+      modalIsOpen: false
     };
   }
 
@@ -16,6 +33,14 @@ class Lessons extends Component {
     if (this.props.type === "lessons") {
       this.props.history.push("/lessons/" + id);
     }
+  };
+
+  openModal = e => {
+    this.setState({ modalIsOpen: true, currentLesson: e.target.innerText });
+  };
+
+  closeModal = () => {
+    this.setState({ modalIsOpen: false });
   };
 
   componentDidMount() {
@@ -87,9 +112,28 @@ class Lessons extends Component {
               })
             : ""}
         </div>
+        <Modal
+          className="modal"
+          isOpen={this.state.modalIsOpen}
+          onRequestClose={this.closeModal}
+          style={customStyles}
+        >
+          <span>Lesson:</span>
+          {this.state.lessonObj.title && (
+            <div className="lesson-details-text">
+              {this.state.lessonObj.details}
+            </div>
+          )}
+          <button className="submit" onClick={this.closeModal}>
+            Add to Agenda
+          </button>
+          <button className="submit" onClick={this.closeModal}>
+            Close
+          </button>
+        </Modal>
       </div>
     );
   }
 }
 
-export default Lessons;
+export default AddLesson;

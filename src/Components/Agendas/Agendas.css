@@ -8,6 +8,10 @@
   justify-content: center;
 }
 
+.agenda-header-container {
+  margin: 50px 50px;
+}
+
 .agendas-div {
   display: inline-flex;
   max-width: 20%;
