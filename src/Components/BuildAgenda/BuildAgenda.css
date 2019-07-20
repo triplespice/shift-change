@@ -1,6 +1,8 @@
 .BuildAgenda {
   display: flex;
   justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .build-agenda-container {
@@ -33,4 +35,12 @@ textarea {
 
 .build-agenda-header-container {
   margin-bottom: 20px;
+}
+
+.choose-lesson-list {
+  margin: 0 auto;
+}
+
+.lessons {
+  margin: 0 auto;
 }

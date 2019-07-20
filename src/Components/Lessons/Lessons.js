@@ -67,7 +67,7 @@ class Lessons extends Component {
           {this.state.lessons
             ? topArray.map((array, index) => {
                 return (
-                  <div className={"category"}>
+                  <div id="accordions" className={"category"}>
                     <button class="accordion">
                       {array[0] ? array[0].category : ""}
                     </button>

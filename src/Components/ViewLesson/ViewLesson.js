@@ -94,22 +94,31 @@ class ViewLesson extends Component {
   };
 
   renderButtons = () => {
-    return (
-      <div className="lesson-buttons-container">
-        <input
-          onClick={this.openEditModal}
-          type="button"
-          className="submit"
-          value="Edit"
-        />
-        <input
-          onClick={this.openDeleteModal}
-          type="button"
-          className="submit"
-          value="Delete"
-        />
-      </div>
-    );
+    if (this.state.lesson.title) {
+      if (this.props.isLoggedIn) {
+        return (
+          <div className="lesson-buttons-container">
+            <input
+              onClick={this.openEditModal}
+              type="button"
+              className="submit"
+              value="Edit"
+            />
+            <input
+              onClick={this.openDeleteModal}
+              type="button"
+              className="submit"
+              value="Delete"
+            />
+          </div>
+        );
+      } else
+        return (
+          <div>
+            <login />
+          </div>
+        );
+    }
   };
 
   render() {

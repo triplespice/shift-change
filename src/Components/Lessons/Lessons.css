@@ -1,5 +1,6 @@
 .Lessons {
   width: 100%;
+  margin-top: 50px;
 }
 
 .lessons-div-container {
@@ -65,6 +66,10 @@
   color: black;
   font-weight: 800;
 }
+
+/* #accordions {
+  margin-top: 50px;
+} */
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {

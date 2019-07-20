@@ -52,7 +52,11 @@ class SubmitLesson extends Component {
               <option value="activity">Team Building Activity</option>
             </select>
             Details:
-            <textarea className="create-input" name="details" />
+            <textarea
+              id="lesson-textarea"
+              className="create-input"
+              name="details"
+            />
             <input type="submit" className="submit" value="Submit" />
           </form>
         </div>
