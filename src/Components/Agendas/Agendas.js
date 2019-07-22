@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./Agendas.css";
-import logo from "../App/clipboard.png";
 
 class Agendas extends Component {
   handleClick = id => {

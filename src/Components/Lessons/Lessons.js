@@ -36,11 +36,11 @@ class Lessons extends Component {
     let topArray = [[], [], []];
 
     for (let i = 0; i < this.state.lessons.length; i++) {
-      if (this.state.lessons[i].category == "Sales Techniques") {
+      if (this.state.lessons[i].category === "Sales Techniques") {
         topArray[0].push(this.state.lessons[i]);
-      } else if (this.state.lessons[i].category == "Customer Service") {
+      } else if (this.state.lessons[i].category === "Customer Service") {
         topArray[1].push(this.state.lessons[i]);
-      } else if (this.state.lessons[i].category == "Team Building Activity") {
+      } else if (this.state.lessons[i].category === "Team Building Activity") {
         topArray[2].push(this.state.lessons[i]);
       }
     }
