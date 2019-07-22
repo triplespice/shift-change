@@ -2,6 +2,23 @@ import React, { Component } from "react";
 import "./BuildAgenda.css";
 import axios from "axios";
 import AddLesson from "../AddLesson/AddLesson";
+import Modal from "react-modal";
+
+let url = "https://shift-change-api.herokuapp.com";
+
+const customStyles = {
+  content: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    height: "75%",
+    width: "40%"
+  }
+};
 
 class BuildAgenda extends Component {
   constructor(props) {
@@ -9,7 +26,8 @@ class BuildAgenda extends Component {
     this.state = {
       user: null,
       lessons: this.props.lessons,
-      isValid: true
+      isValid: true,
+      detailsIsOpen: false
     };
   }
 
@@ -30,6 +48,42 @@ class BuildAgenda extends Component {
       }
     }
 
+    // openDetailsModal = () => {
+    //   this.setState({ detailsIsOpen: true });
+    // };
+
+    // closeDetailsModal = () => {
+    //   this.setState({ detailsIsOpen: false });
+    // };
+
+    // renderButtons = () => {
+    //   if (this.state.lesson.title) {
+    //     if (this.props.isLoggedIn) {
+    //       return (
+    //         <div className="lesson-buttons-container">
+    //           <input
+    //             onClick={this.openEditModal}
+    //             type="button"
+    //             className="submit"
+    //             value="Edit"
+    //           />
+    //           <input
+    //             onClick={this.openDeleteModal}
+    //             type="button"
+    //             className="submit"
+    //             value="Delete"
+    //           />
+    //         </div>
+    //       );
+    //     } else
+    //       return (
+    //         <div>
+    //           <login />
+    //         </div>
+    //       );
+    //   }
+    // };
+
     // to get which boxes were checked, loop through e.target.lessonChecbox
     // if e.target.lessonChecked[i].checked === true, add e.target.lessonChecked.value to some array
     // use that array in the req.body you pass in to the axios post request
@@ -39,9 +93,8 @@ class BuildAgenda extends Component {
       !t.date.value ||
       !t.announcements.value ||
       !t.shoutOuts.value ||
-      !t.tasks.value
-      //   ||
-      //   array.length === 0
+      !t.tasks.value ||
+      array.length === 0
     ) {
       this.setState({ isValid: false });
     } else {
@@ -50,8 +103,8 @@ class BuildAgenda extends Component {
         author: localStorage.userID,
         announcements: t.announcements.value,
         shoutOuts: t.shoutOuts.value,
-        tasks: t.tasks.value
-        // lesson: array
+        tasks: t.tasks.value,
+        lesson: array
       };
       let url = "https://shift-change-api.herokuapp.com/api/lessons";
       console.log(returnedForm);
@@ -160,6 +213,35 @@ class BuildAgenda extends Component {
                               );
                             })}
                           </div>
+                          {/* <Modal
+                            className="modal"
+                            isOpen={this.state.detailsIsOpen}
+                            onRequestClose={this.closeDetailsModal}
+                            style={customStyles}
+                          >
+                            <div className="lesson-container">
+                              {this.state.lesson && (
+                                <div className="lesson-info-container">
+                                  <h1>{this.state.lesson.title}</h1>
+                                  <ul className="lesson-list">
+                                    <li>
+                                      <span className="bold-font">
+                                        <h3>Category:</h3>
+                                      </span>
+                                      {this.state.lesson.category}
+                                    </li>
+                                    <li>
+                                      <span className="bold-font">
+                                        <h3>Details:</h3>
+                                      </span>
+                                      {this.state.lesson.details}
+                                    </li>
+                                  </ul>
+                                </div>
+                              )}
+                              {this.renderButtons()}
+                            </div>
+                          </Modal> */}
                         </div>
                       );
                     })
