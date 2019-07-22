@@ -135,13 +135,19 @@ class BuildAgenda extends Component {
                   ? topArray.map((array, index) => {
                       return (
                         <div id="accordions" className={"category"}>
-                          <button type="button" class="accordion">
-                            {array[0] ? array[0].category : ""}
-                          </button>
+                          <a href="#" class="accordion" type="button">
+                            <span>{array[0] ? array[0].category : ""}</span>
+                          </a>
+
+                          {/* <button
+                            type="button"
+                            class="accordion"
+                          > */}
+                          {/* </button> */}
                           <div class="panel">
                             {array.map(lesson => {
                               return (
-                                <span>
+                                <span className="listitem">
                                   <input
                                     type="checkbox"
                                     value={lesson._id}

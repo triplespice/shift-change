@@ -82,12 +82,15 @@ textarea {
   color: #444;
   cursor: pointer;
   padding: 18px;
-  width: 100%;
+  width: 500px;
   text-align: left;
   border: none;
   outline: none;
   transition: 0.4s;
   margin-bottom: 10px;
+  margin-top: 20px;
+  /* margin-left: 30px; */
+  display: block;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -102,6 +105,7 @@ textarea {
   background-color: white;
   display: none;
   overflow: hidden;
+  width: 500px;
 }
 
 .accordion:after {
@@ -118,4 +122,25 @@ textarea {
 
 #titles {
   color: #940508;
+}
+
+/* .button {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #eeeeee;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #cccccc;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #cccccc;
+} */
+
+#accordions {
+  width: 500px;
+}
+
+.listitem {
+  width: 400px;
+  display: inline-block;
 }

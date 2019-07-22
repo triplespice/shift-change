@@ -170,8 +170,8 @@ class ViewLesson extends Component {
               name="category"
             />
             Details:
-            <input
-              type="text"
+            <textarea
+              rows="5"
               defaultValue={this.state.lesson ? this.state.lesson.details : ""}
               className="details lesson-input"
               name="details"
