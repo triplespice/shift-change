@@ -25,7 +25,8 @@ class ViewAgenda extends Component {
     this.state = {
       agenda: {},
       editIsOpen: false,
-      deleteIsOpen: false
+      deleteIsOpen: false,
+      lesson: {}
     };
   }
 
@@ -97,22 +98,31 @@ class ViewAgenda extends Component {
   };
 
   renderButtons = () => {
-    return (
-      <div className="agenda-buttons-container">
-        <input
-          onClick={this.openEditModal}
-          type="button"
-          className="submit"
-          value="Edit"
-        />
-        <input
-          onClick={this.openDeleteModal}
-          type="button"
-          className="submit"
-          value="Delete"
-        />
-      </div>
-    );
+    if (this.state.agenda.date) {
+      if (this.props.isLoggedIn) {
+        return (
+          <div className="agenda-buttons-container">
+            <input
+              onClick={this.openEditModal}
+              type="button"
+              className="submit"
+              value="Edit"
+            />
+            <input
+              onClick={this.openDeleteModal}
+              type="button"
+              className="submit"
+              value="Delete"
+            />
+          </div>
+        );
+      } else
+        return (
+          <div>
+            <login />
+          </div>
+        );
+    }
   };
 
   render() {
@@ -156,6 +166,7 @@ class ViewAgenda extends Component {
               </ul>
             </div>
           )}
+          {this.renderButtons()}
         </div>
         <Modal
           className="modal"

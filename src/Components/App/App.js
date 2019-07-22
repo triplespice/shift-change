@@ -168,6 +168,7 @@ class App extends Component {
             render={props => (
               <BuildAgenda
                 agendas={this.state.agendas}
+                lessons={this.state.lessons}
                 {...props}
                 isLoggedIn={this.state.isLoggedIn}
               />
@@ -181,8 +182,18 @@ class App extends Component {
           <Route
             path="/search/lessons/:id"
             exact
-            render={props => <ViewLesson {...props} />}
+            render={props => (
+              <ViewLesson isLoggedIn={this.state.isLoggedIn} {...props} />
+            )}
           />
+          <Route
+            path="/search/agendas/:id"
+            exact
+            render={props => (
+              <ViewAgenda isLoggedIn={this.state.isLoggedIn} {...props} />
+            )}
+          />
+
           <Route
             path="/search/agendas/"
             exact

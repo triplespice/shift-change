@@ -25,7 +25,8 @@ class ViewLesson extends Component {
     this.state = {
       agenda: {},
       editIsOpen: false,
-      deleteIsOpen: false
+      deleteIsOpen: false,
+      lesson: {}
     };
   }
 
@@ -144,6 +145,7 @@ class ViewLesson extends Component {
               </ul>
             </div>
           )}
+          {this.renderButtons()}
         </div>
         <Modal
           className="modal"
@@ -152,7 +154,8 @@ class ViewLesson extends Component {
           style={customStyles}
         >
           <form className="lesson-form" onSubmit={this.handleEditForm}>
-            Title:{" "}
+            <h3>Edit Lesson</h3>
+            Title:&nbsp;&nbsp;&nbsp;{" "}
             <input
               type="text"
               defaultValue={this.state.lesson ? this.state.lesson.title : ""}
@@ -173,6 +176,9 @@ class ViewLesson extends Component {
               className="details lesson-input"
               name="details"
             />
+            <button className="yes-no-buttons submit" onClick={this.editLesson}>
+              Save
+            </button>
           </form>
         </Modal>
 

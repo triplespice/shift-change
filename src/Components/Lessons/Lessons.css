@@ -3,6 +3,10 @@
   margin-top: 50px;
 }
 
+.lessons-header-container {
+  margin: 50px 50px;
+}
+
 .lessons-div-container {
   display: flex;
   flex-direction: column;

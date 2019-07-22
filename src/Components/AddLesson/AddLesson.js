@@ -35,8 +35,13 @@ class AddLesson extends Component {
     }
   };
 
+  // 2.
+  // create a function for the span to call, the takes an id as an argument
+  // makes an axios call, stores the response in the state lessonObj.
+  // when axios call is done, add another .then that calls openModal.
+
   openModal = e => {
-    this.setState({ modalIsOpen: true, currentLesson: e.target.innerText });
+    this.setState({ modalIsOpen: true });
   };
 
   closeModal = () => {
@@ -99,6 +104,10 @@ class AddLesson extends Component {
                     <div class="panel">
                       {array.map(lesson => {
                         return (
+                          // 1.
+                          // change link to a span, give span a onClick that calls a function
+                          // that function makes an axios call to get specific lesson info by id
+                          // id is passed to said function form here (lesson._id) so it can be used in axios call
                           <Link to={"/search/lessons/" + lesson._id}>
                             <div id="titles" className={lesson}>
                               {lesson.title}

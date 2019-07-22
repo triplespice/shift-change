@@ -63,6 +63,9 @@ class Lessons extends Component {
 
     return (
       <div className="Lessons">
+        <div className="lessons-header-container">
+          <h2>Select A Lesson to View:</h2>
+        </div>
         <div className="lessons-div-container">
           {this.state.lessons
             ? topArray.map((array, index) => {
