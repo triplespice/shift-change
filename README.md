@@ -4,7 +4,7 @@ Organized meetings prior to the start of a work shift are a major opportunity fo
 
 For this reason, I made an app that features a collection of training lessons that managers can browse and select from to add to an agenda form which they can reference during a pre-work team meeting. With this resource, they can maximize their morning meetings and be sure to get the most out of their retail staff and every work shift.
 
-![Rec|Creation App ScreenShot](http://wayfindmedia.com/wp-content/uploads/2019/07/ShiftChange_Screenshot-1.png "home page screenshot")
+![ShiftChange App ScreenShot](http://wayfindmedia.com/wp-content/uploads/2019/07/ShiftChange_Screenshot-1.png "home page screenshot")
 
 ## Built With
 
@@ -28,7 +28,7 @@ Front-End: Axios, React, React-Dom, React-Router-Dom, React-Scripts
 
 ## Process
 
-Initial planning involved coming up with a project idea and developing data models and wireframes, creating repositories, and a work schedule. For more details, [visit the planning directory](https://github.com/triplespice/shift-change/tree/master/Planning).
+Initial planning involved coming up with a project idea and developing data models and wireframes, creating repositories, and a work schedule. For more details, [visit the planning directory](https://github.com/jmittelman/shift-change/tree/master/Planning).
 
 From there, I proceeded to collect data and use it to seed a database. The resulting API was deployed through Heroku.
 
