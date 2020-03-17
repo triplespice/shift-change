@@ -4,7 +4,7 @@ Organized meetings prior to the start of a work shift are a major opportunity fo
 
 For this reason, I made an app that features a collection of training lessons that managers can browse and select from to add to an agenda form which they can reference during a pre-work team meeting. With this resource, they can maximize their morning meetings and be sure to get the most out of their retail staff and every work shift.
 
-![ShiftChange App ScreenShot](https://drive.google.com/file/d/1pO7wet76Hpm7BE3S8pf9pYHp-G7l1-Nd/view?usp=sharing "home page screenshot")
+![ShiftChange App ScreenShot](https://booksmartmath.com/wp-content/uploads/2020/03/shiftchange-scaled.jpg "home page screenshot")
 
 ## Built With
 
