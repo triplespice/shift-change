@@ -4,14 +4,14 @@ Organized meetings prior to the start of a work shift are a major opportunity fo
 
 For this reason, I made an app that features a collection of training lessons that managers can browse and select from to add to an agenda form which they can reference during a pre-work team meeting. With this resource, they can maximize their morning meetings and be sure to get the most out of their retail staff and every work shift.
 
-![ShiftChange App ScreenShot](http://wayfindmedia.com/wp-content/uploads/2019/07/ShiftChange_Screenshot-1.png "home page screenshot")
+![ShiftChange App ScreenShot](https://drive.google.com/file/d/1pO7wet76Hpm7BE3S8pf9pYHp-G7l1-Nd/view?usp=sharing "home page screenshot")
 
 ## Built With
 
 I built an API to interact with a list of games, events, and users and all of their properties.
 The API was created with Node.js, Express, MongoDB, and Mongoose. Postman was used for testing routes, locally, throughout development. And, ultimately the API was deployed via Heroku and the database was hosted on MongoDB Atlas.
 
-The [back-end](https://github.com/triplespice/shift-change-api) was extended by a front-end, created using React. This was deployed and hosted on Surge.
+The [back-end](https://github.com/jmittelman/shift-change-api) was extended by a front-end, created using React. This was deployed and hosted on Surge.
 
 ## Dependencies
 
