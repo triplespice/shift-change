@@ -8,7 +8,7 @@ For this reason, I made an app that features a collection of training lessons th
 
 ## Built With
 
-I built an API to interact with a list of games, events, and users and all of their properties.
+I built an API to interact with a list of training lessons by category, agendas that include announcements, tasks, shout-outs, and lessons, as well as users and all of their properties.
 The API was created with Node.js, Express, MongoDB, and Mongoose. Postman was used for testing routes, locally, throughout development. And, ultimately the API was deployed via Heroku and the database was hosted on MongoDB Atlas.
 
 The [back-end](https://github.com/jmittelman/shift-change-api) was extended by a front-end, created using React. This was deployed and hosted on Surge.
